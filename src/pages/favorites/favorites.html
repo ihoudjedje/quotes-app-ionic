@@ -1,0 +1,31 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button menuToggle>
+      <ion-icon name="menu" ></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Favorites</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item-sliding *ngFor="let q of favoritedQuotes">
+        <ion-item ion-item  (click)="onViewSingleQuote(q)" >  <!--[color]="setBackground()"-->
+          <h3>{{q.text}}</h3>
+          <p>{{q.person}}</p>
+        </ion-item>
+        <ion-item-options side="right">
+          <button ion-button color="danger" (click)="onTrashToRemoveFavorite(q)">
+            <ion-icon name="trash" ></ion-icon>
+            Delete
+          </button>
+        </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

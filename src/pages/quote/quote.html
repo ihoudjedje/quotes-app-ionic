@@ -1,0 +1,19 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{quote.person}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding text-center>
+<ion-card>
+  <ion-card-content>
+    {{quote.text}}
+  </ion-card-content>
+  <button ion-button small round outline (click)="onUnfavorite(quote, false)">Unfavorite</button>
+</ion-card>
+  <button ion-button color="danger" (click)="onCloseModal(true)">Close</button>
+</ion-content>

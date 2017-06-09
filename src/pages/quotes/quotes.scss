@@ -1,0 +1,12 @@
+page-quotes {
+.author_name{
+  color: #8e9093;
+  text-align: right;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  &:before{
+    content: '_ ';
+  }
+}
+}
